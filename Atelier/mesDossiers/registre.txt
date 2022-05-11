@@ -1,0 +1,15 @@
+
+----Liste des produits à acherter----
+
+Lait
+Frommage
+Pain
+Tomate
+Beurre
+Café
+Mayonnaise
+Mayonnaise
+---
+Salade
+Riz
+---

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app
+	xmlns="http://java.sun.com/xml/ns/javaee" version="3.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   
+    schemaLocation="http://java.sun.com/xml/ns/javaee 
+    http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    
+  <!-- la déclaration de la servlet -->
+  <servlet>
+    <servlet-name>Test</servlet-name>
+    <!-- le nom de la classe implémentant la servlet (précédé du nom du package) -->
+    <servlet-class>com.allSafe.servlets.Test</servlet-class>
+  </servlet>
+  
+  
+  <!-- l'association de la servlet avec un motif d'URL -->
+  <servlet-mapping>
+    <servlet-name>Test</servlet-name>
+    <!-- le motif d'url (par exemple *.html ou /servlet) -->
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>
+  
+  
+  	<!-- Autre servlet -->
+    <!-- la déclaration de la servlet -->
+    
+    <servlet>
+    <servlet-name>Proprietaire</servlet-name>
+    <servlet-class>com.allSafe.servlets.Proprietaire</servlet-class>
+  </servlet>
+  
+  
+  <!-- l'association de la servlet avec un motif d'URL -->
+	<servlet-mapping>
+    <servlet-name>Proprietaire</servlet-name>
+    <url-pattern>/proprietaires</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>Propriete</servlet-name>
+  	<servlet-class>com.allSafe.servlets.Propriete</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>Propriete</servlet-name>
+  	<url-pattern>/proprietes</url-pattern>
+  </servlet-mapping>
+  
+   <!-- Configuration de chargement de fichiers -->
+   
+   <multipart-config>
+   		<location>/home/shadowalker/Bureau/workSpace/JavaEE/mesFichiersTmp/</location>
+   		<max-file-size>10485760</max-file-size>
+   		<max-request-size>52428800</max-request-size>
+   		<file-size-threshold>1048576</file-size-threshold>
+   </multipart-config>
+  
+  
+  <!-- Configuration de JSTL -->
+  
+  <jsp-config>
+
+  <jsp-property-group>
+
+    <url-pattern>*.jsp</url-pattern>
+
+    <include-prelude>/WEB-INF/taglibs.jsp</include-prelude>
+
+  </jsp-property-group>
+
+</jsp-config>
+  
+</web-app>
